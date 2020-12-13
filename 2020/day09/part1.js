@@ -1,6 +1,4 @@
-import { readFileSync } from 'fs';
-
-const input = readFileSync('input.txt', 'utf8');
+import input from '../../input.js';
 const xmas = input.match(/\d+/g).map(Number);
 const preamble = xmas.splice(0, 25);
 

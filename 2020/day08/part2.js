@@ -1,14 +1,14 @@
-import { readFileSync } from 'fs';
-
-const input = readFileSync('input.txt', 'utf8');
+import input from '../../input.js';
 
 for (const match of input.matchAll(/nop|jmp/g)) {
-  const instructions = [
+  const modified = [
     input.slice(0, match.index),
     match[0] === 'nop' ? 'jmp' : 'nop',
     input.slice(match.index + match.length),
-  ].join('').match(/.+/gm);
+  ].join('');
+  const instructions = modified.match(/.+/gm);
   const visited = new Set();
+
   let pc = 0;
   let accumulator = 0;
 

@@ -1,6 +1,4 @@
-import { readFileSync } from 'fs';
-
-const input = readFileSync('input.txt', 'utf8');
+import input from '../../input.js';
 
 let sum = 0;
 

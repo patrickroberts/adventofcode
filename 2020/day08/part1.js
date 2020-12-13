@@ -1,6 +1,4 @@
-import { readFileSync } from 'fs';
-
-const input = readFileSync('input.txt', 'utf8');
+import input from '../../input.js';
 const instructions = input.match(/.+/gm);
 const visited = new Set();
 

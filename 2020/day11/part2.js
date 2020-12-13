@@ -1,17 +1,8 @@
-import { readFileSync } from 'fs';
-
-const input = readFileSync('input.txt', 'utf8');
-const [survive, born] = process.argv[2].match(/\d+/g);
-const delta = [
-  [-1, -1],
-  [-1, 0],
-  [-1, 1],
-  [0, -1],
-  [0, 1],
-  [1, -1],
-  [1, 0],
-  [1, 1],
-];
+import input from '../../input.js';
+import accumulate from '../accumulate.js';
+import delta from './delta.js';
+const survive = [0, 1, 2, 3, 4];
+const born = [0];
 
 let curr = input;
 
@@ -20,7 +11,9 @@ for (let next;; curr = next) {
   if (next === curr) break;
 }
 
-console.log(accumulate(curr, '#'));
+const occupied = accumulate(curr, 0, (acc, value) => acc + Number(value === '#'));
+
+console.log(occupied);
 
 function step(prev) {
   return prev.match(/[.L#]+/g).map((row, y, rows) => {
@@ -47,10 +40,4 @@ function step(prev) {
       return 'L';
     });
   }).join('\n');
-}
-
-function accumulate(grid, value) {
-  return Array.prototype.reduce.call(
-    grid, (acc, val) => acc + Number(val === value), 0,
-  );
 }
