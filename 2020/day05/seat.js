@@ -1,4 +1,5 @@
 import accumulate from '../accumulate.js';
+
 const partition = (lower, upper) => ([min, max], half) => {
   const mid = (min + max) / 2;
   switch (half) {

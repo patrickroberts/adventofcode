@@ -1,4 +1,5 @@
 import input from '../../input.js';
+
 const [earliest, ids] = input.split('\n');
 
 let minWaitTime = Infinity;

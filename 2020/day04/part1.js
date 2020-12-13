@@ -1,4 +1,5 @@
 import input from '../../input.js';
+
 const required = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'];
 
 let valid = 0;

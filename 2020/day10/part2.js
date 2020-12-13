@@ -1,4 +1,5 @@
 import differences from './differences.js';
+
 const arrangements = [];
 
 for (const [i, difference] of differences.entries()) {

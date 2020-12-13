@@ -1,4 +1,5 @@
 import input from '../../input.js';
+
 const range = (val, min, max) => val >= min && val <= max;
 const rules = new Map([
   ['byr', [/^\d{4}$/, ([byr]) => range(byr, 1920, 2002)]], 

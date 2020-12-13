@@ -1,5 +1,6 @@
 import input from '../../input.js';
 import seat from './seat.js';
+
 const ids = new Set();
 
 let lowest = 1024;

@@ -1,4 +1,5 @@
 import input from '../../input.js';
+
 const ids = input.split('\n')[1].split(',');
 const entries = ids
   .map((id, index) => [Number(id), id - (index % id) % id])

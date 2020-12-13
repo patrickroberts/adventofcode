@@ -1,6 +1,7 @@
 import input from '../../input.js';
 import accumulate from '../accumulate.js';
 import trees from './trees.js';
+
 const grid = input.split('\n');
 const slopes = [
   [1, 1],

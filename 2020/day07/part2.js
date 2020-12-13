@@ -1,4 +1,5 @@
 import input from '../../input.js';
+
 const map = new Map();
 
 for (const [, outer, inner] of input.matchAll(/(\w+ \w+) bags? contain (.+)/g)) {
