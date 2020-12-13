@@ -4,4 +4,13 @@ import { dirname, resolve } from 'path';
 const defaultPath = resolve(dirname(process.argv[1]), 'input.txt');
 const [path = defaultPath] = process.argv.slice(2, 3);
 
-export default await promises.readFile(path, 'utf8');
+let input;
+
+try {
+  input = await promises.readFile(path, 'utf8');
+} catch (error) {
+  console.error(error.message);
+  process.exit(1);
+}
+
+export default input;
