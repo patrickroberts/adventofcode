@@ -1,4 +1,4 @@
-import input from '../../input.js';
+import input from '../../shared/input.js';
 import seat from './seat.js';
 
 const ids = new Set();

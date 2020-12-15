@@ -1,4 +1,4 @@
-import input from '../../input.js';
+import input from '../../shared/input.js';
 import trees from './trees.js';
 
 const grid = input.split('\n');

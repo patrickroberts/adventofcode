@@ -1,5 +1,5 @@
-import input from '../../input.js';
-import accumulate from '../accumulate.js';
+import input from '../../shared/input.js';
+import accumulate from '../../shared/accumulate.js';
 import delta from './delta.js';
 
 const survive = [0, 1, 2, 3, 4];

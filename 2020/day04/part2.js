@@ -1,4 +1,4 @@
-import input from '../../input.js';
+import input from '../../shared/input.js';
 
 const range = (val, min, max) => val >= min && val <= max;
 const rules = new Map([

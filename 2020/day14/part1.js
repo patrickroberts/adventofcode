@@ -1,5 +1,5 @@
-import input from '../../input.js';
-import accumulate from '../accumulate.js';
+import input from '../../shared/input.js';
+import accumulate from '../../shared/accumulate.js';
 
 let set, clr;
 const mem = new Map();

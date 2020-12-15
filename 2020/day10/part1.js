@@ -1,4 +1,4 @@
-import accumulate from '../accumulate.js';
+import accumulate from '../../shared/accumulate.js';
 import differences from './differences.js';
 
 const count = (array, x) => accumulate(

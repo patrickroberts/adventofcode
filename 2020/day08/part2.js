@@ -1,4 +1,4 @@
-import input from '../../input.js';
+import input from '../../shared/input.js';
 import interpret from './interpret.js';
 
 for (const match of input.matchAll(/nop|jmp/g)) {
