@@ -1,29 +1,29 @@
 import input from '../../shared/input.js';
-import accumulate from '../../shared/accumulate.js';
+
+const map = new Map();
+
+let indices;
+
+for (const [index, key] of input.match(/\d+/g).map(Number).entries()) {
+  add(key, index);
+}
 
 let number;
 
-const numbers = accumulate(
-  input.match(/\d+/g).map(Number), new Map(), seed,
-);
-
-for (let index = numbers.size; index < 30000000; ++index) {
-  number = add(numbers, index);
+for (let index = map.size; index < 30000000; ++index) {
+  number = indices[1] - indices[0];
+  add(number, index);
 }
 
 console.log(number);
 
-function seed(map, value, index) {
-  number = value;
-
-  return map.set(value, [map.get(value)?.[1] ?? index, index]);
-}
-
-function add(map, index) {
-  const indices = map.get(number);
-  const apart = indices[1] - indices[0];
-
-  map.set(apart, [map.get(apart)?.[1] ?? index, index]);
-
-  return apart;
+function add(key, index) {
+  if (map.has(key)) {
+    indices = map.get(key);
+    indices[0] = indices[1];
+    indices[1] = index;
+  } else {
+    indices = [index, index];
+    map.set(key, indices);
+  }
 }
