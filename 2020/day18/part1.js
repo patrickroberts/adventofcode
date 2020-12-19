@@ -8,7 +8,6 @@ for (const [line] of input.matchAll(/.+/gm)) {
 
 console.log(sum);
 
-
 function evaluate(tokens) {
   let lhs = operand(tokens);
 
